@@ -16,7 +16,7 @@ app.use(express.json({
 
 
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'frontend/build')));
+app.use(express.static(path.join(__dirname, 'build')));
 
 
 app.use('/', require("./redirect"));
@@ -24,7 +24,7 @@ app.use('/api', require("./url"));
 
 app.get('/menu', (req,res) => {
     console.log("SERVED")
-    res.sendFile(path.join(__dirname, 'frontend/build/index.html'));
+    res.sendFile(path.join(__dirname, 'build/index.html'));
   });
 
 const PORT = process.env.PORT || 5000;
