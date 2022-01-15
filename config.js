@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 
-const uri = "mongodb://localhost:27017/urlshortener";
+host = process.env.HOST || localhost
+
+const uri = `mongodb://${host}:27017/urlshortener`;
 
 mongoose.connect(uri, {
     useNewUrlParser: true,
