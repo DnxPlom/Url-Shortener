@@ -7,10 +7,10 @@ const router = express.Router();
 const Url = require("./models/db");
 const Counter = require("./models/counter.db");
 
-const baseUrl = "http://localhost:5000";
+const host = process.env.HOST || "localhost";
+const baseUrl = `http://${host}:5000`;
 const constant = 56799999999
 const incConstant = 2045258573
-
 
 function generateCode(id) {
     let map = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
