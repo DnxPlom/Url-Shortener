@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-host = process.env.HOST || localhost
+const host = process.env.HOST || "localhost";
 
 const uri = `mongodb://${host}:27017/urlshortener`;
 
